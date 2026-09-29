@@ -1,0 +1,36 @@
+/* 221B Games: visual de fliperama escuro, igual ao Pixel Hoops. */
+:root {
+  --fundo: #120b22;
+  --painel: #1d1336;
+  --moldura: #52297f;
+  --neon: #5ef0ff;
+  --ouro: #ffcc33;
+  --texto: #f4efe6;
+  --suave: #b8c4ee;
+  --display: "Press Start 2P", "Courier New", monospace;
+  --corpo: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--fundo); color: var(--texto);
+  font-family: var(--corpo); font-size: 17px; line-height: 1.6;
+  padding-inline: 16px; padding-block: 32px 64px;
+}
+main { max-width: 720px; margin-inline: auto; display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.5; text-wrap: balance; }
+h1 { font-size: clamp(18px, 5vw, 26px); color: var(--ouro); margin: 0; text-shadow: 3px 3px 0 #000; }
+h2 { font-size: 14px; color: var(--neon); margin: 32px 0 8px; }
+h3 { font-size: 11px; color: var(--ouro); margin: 20px 0 4px; }
+p, li { max-width: 65ch; }
+a { color: var(--neon); }
+a:focus-visible { outline: 2px solid var(--ouro); outline-offset: 2px; }
+.painel { background: var(--painel); border: 4px solid var(--moldura); padding: 20px 22px; }
+.suave { color: var(--suave); }
+.topo { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.marca { font-family: var(--display); font-size: 12px; color: var(--suave); text-decoration: none; }
+.idiomas a { font-family: var(--display); font-size: 10px; margin-left: 12px; }
+.jogo { display: grid; grid-template-columns: 180px 1fr; gap: 20px; align-items: start; }
+.jogo img { width: 100%; image-rendering: pixelated; border: 4px solid var(--moldura); }
+@media (max-width: 520px) { .jogo { grid-template-columns: 1fr; } .jogo img { max-width: 240px; } }
+footer { color: var(--suave); font-size: 14px; }
