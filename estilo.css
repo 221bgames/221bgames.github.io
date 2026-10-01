@@ -32,5 +32,6 @@ a:focus-visible { outline: 2px solid var(--ouro); outline-offset: 2px; }
 .idiomas a { font-family: var(--display); font-size: 10px; margin-left: 12px; }
 .jogo { display: grid; grid-template-columns: 180px 1fr; gap: 20px; align-items: start; }
 .jogo img { width: 100%; image-rendering: pixelated; border: 4px solid var(--moldura); }
+.jogo img.liso { image-rendering: auto; }
 @media (max-width: 520px) { .jogo { grid-template-columns: 1fr; } .jogo img { max-width: 240px; } }
 footer { color: var(--suave); font-size: 14px; }
